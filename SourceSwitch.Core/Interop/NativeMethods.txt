@@ -1,0 +1,16 @@
+﻿GetPhysicalMonitorsFromHMONITOR
+MonitorFromWindow
+GetMonitorCapabilities
+EnumDisplayMonitors
+GetVCPFeatureAndVCPFeatureReply
+GetMonitorInfo
+GetPhysicalMonitorsFromHMONITOR
+GetNumberOfPhysicalMonitorsFromHMONITOR
+SetVCPFeature
+DestroyPhysicalMonitor
+MonitorFromWindow
+MONITORINFOEXW
+GetCapabilitiesStringLength
+GetCursorPos
+MonitorFromPoint
+CapabilitiesRequestAndCapabilitiesReply

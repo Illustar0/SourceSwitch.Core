@@ -1,6 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
+    <Platforms>x64;ARM64</Platforms>
+    <RuntimeIdentifiers>win-x64;win-arm64</RuntimeIdentifiers>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <CsWin32RunAsBuildTask>true</CsWin32RunAsBuildTask>
@@ -9,15 +11,7 @@
   <PropertyGroup>
     <DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
     <IsAotCompatible>true</IsAotCompatible>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <PublishAot>false</PublishAot>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PublishAot>true</PublishAot>
-    <InvariantGlobalization>true</InvariantGlobalization>
-    <DebugType>none</DebugType>
-    <StripSymbols>true</StripSymbols>
+    <IsTrimmable>true</IsTrimmable>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Windows.CsWin32">

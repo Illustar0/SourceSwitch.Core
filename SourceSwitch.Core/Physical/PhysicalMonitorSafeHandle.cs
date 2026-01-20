@@ -1,6 +1,7 @@
 using System.Runtime.Versioning;
 using Microsoft.Win32.SafeHandles;
 using Windows.Win32;
+using Windows.Win32.Foundation;
 
 namespace SourceSwitch.Core.Physical;
 
@@ -32,6 +33,6 @@ public sealed class PhysicalMonitorSafeHandle : SafeHandleZeroOrMinusOneIsInvali
     /// <returns>true if the handle was released successfully; otherwise, false.</returns>
     protected override bool ReleaseHandle()
     {
-        return PInvoke.DestroyPhysicalMonitor(this);
+        return PInvoke.DestroyPhysicalMonitor((HANDLE)handle);
     }
 }
